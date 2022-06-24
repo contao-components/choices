@@ -1,12 +1,12 @@
 {
     "name": "contao-components/choices",
-    "type": "contao-component",
     "description": "Choices integration for Contao Open Source CMS",
     "license": "MIT",
+    "type": "contao-component",
     "authors": [
         {
-            "name": "Andreas Schempp",
-            "homepage": "https://github.com/aschempp"
+            "name": "Josh Johnson",
+            "homepage": "https://github.com/jshjohnson"
         }
     ],
     "require": {
