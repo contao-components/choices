@@ -398,8 +398,7 @@ function () {
           label: option.innerHTML,
           selected: !!option.selected,
           disabled: option.disabled || option.parentNode.disabled,
-          // PATCH: do not use empty options as placeholder
-          placeholder: option.hasAttribute('placeholder'),
+          placeholder: option.value === '' || option.hasAttribute('placeholder'),
           customProperties: option.dataset['custom-properties']
         });
       });
