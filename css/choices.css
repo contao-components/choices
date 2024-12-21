@@ -351,10 +351,12 @@ html[data-color-scheme=dark] {
 }
 
 /* Add focus outline */
-@media (-webkit-min-device-pixel-ratio: 0) {
-  .choices.is-focused {
-    outline: -webkit-focus-ring-color auto 5px;
-  }
+.choices:focus {
+  outline: revert;
+}
+
+.choices.is-focused {
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 .choices {
