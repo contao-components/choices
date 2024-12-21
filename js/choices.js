@@ -274,7 +274,9 @@
       return aKeys.filter(function (i) { return bKeys.indexOf(i) < 0; });
     };
   var getClassNames = function (ClassNames) {
-    return Array.isArray(ClassNames) ? ClassNames : [ClassNames];
+    if (ClassNames) {
+      return Array.isArray(ClassNames) ? ClassNames : [ClassNames];
+    }
   };
   var getClassNamesSelector = function (option) {
     if (option && Array.isArray(option)) {
@@ -288,9 +290,7 @@
   };
   var addClassesToElement = function (element, className) {
     var _a;
-    if (className) {
-      (_a = element.classList).add.apply(_a, getClassNames(className));
-    }
+    (_a = element.classList).add.apply(_a, getClassNames(className));
   };
   var removeClassesFromElement = function (element, className) {
     var _a;
@@ -4695,7 +4695,7 @@
       if (hasActiveDropdown) {
         event.stopPropagation();
         this.hideDropdown(true);
-        this.refresh(false, false, true);
+        this.refresh(false, false, false);
         this.containerOuter.element.focus();
       }
     };
