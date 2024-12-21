@@ -288,7 +288,9 @@
   };
   var addClassesToElement = function (element, className) {
     var _a;
-    (_a = element.classList).add.apply(_a, getClassNames(className));
+    if (className) {
+      (_a = element.classList).add.apply(_a, getClassNames(className));
+    }
   };
   var removeClassesFromElement = function (element, className) {
     var _a;
