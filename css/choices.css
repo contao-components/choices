@@ -356,6 +356,7 @@ html[data-color-scheme=dark] {
 }
 
 .choices.is-focused {
+  z-index: 4; /* Higher z-index than tinymce and sticky-footer */
   outline: -webkit-focus-ring-color auto 5px;
 }
 
@@ -404,7 +405,6 @@ html[data-color-scheme=dark] {
 .choices__list--dropdown, .choices__list[aria-expanded] {
   background: var(--form-bg);
   border: 1px solid var(--form-border);
-  z-index: 4; /* Higher z-index than tinymce and sticky-footer */
   word-break: break-word;
 }
 
@@ -535,6 +535,12 @@ html:not([data-color-scheme=dark]) .choices[data-type*=text] .choices__button {
   border-radius: 2px;
   border: 1px solid var(--form-border);
   margin-bottom: 3px;
+}
+
+/* Never show the remove button on single selects */
+.choices.tl_select .choices__button {
+  display: none;
+  visibility: hidden;
 }
 
 /* =====  End of Custom styles  ====== */
