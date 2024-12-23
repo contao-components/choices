@@ -21,16 +21,4 @@ function js() {
         .pipe(dest('js'));
 }
 
-function svg() {
-    return src('images/*.svg')
-        .pipe(svgo({
-            multipass: true,
-            plugins: [{
-                sortAttrs: true,
-                inlineStyles: { onlyMatchedOnce: false }
-            }]
-        }))
-        .pipe(dest('images'));
-}
-
-exports.default = parallel(css, js, svg);
+exports.default = parallel(css, js);
