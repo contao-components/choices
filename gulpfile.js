@@ -1,8 +1,6 @@
-const { src, dest, parallel } = require('gulp');
+const { src, dest } = require('gulp');
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
-const svgo = require('gulp-svgo');
-const uglify = require('gulp-uglify');
 
 function css() {
     return src(['css/*.css', '!css/*.min.css'])
@@ -14,11 +12,4 @@ function css() {
         .pipe(dest('css'));
 }
 
-function js() {
-    return src(['js/*.js', '!js/*.min.js'])
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(dest('js'));
-}
-
-exports.default = parallel(css, js);
+exports.default = css;
