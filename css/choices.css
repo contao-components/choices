@@ -403,14 +403,14 @@ html[data-color-scheme=dark] {
 
 /* Dropdown styles */
 .choices__list--dropdown, .choices__list[aria-expanded] {
-  background: var(--form-bg);
-  border: 1px solid var(--form-border);
+  background: var(--form-bg, #fff);
+  border: 1px solid var(--form-border, #aaa);
   word-break: break-word;
 }
 
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
-  border: 1px solid var(--form-border);
+  border: 1px solid var(--form-border, #aaa);
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
@@ -424,11 +424,19 @@ html[data-color-scheme=dark] {
 
 /* Arrow icon */
 .choices[data-type*=select-one]::after {
-  border-color: #b3b3b3 transparent transparent transparent;
+  border: 0;
+  height: 12px;
+  width: 12px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmE2YTZjIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPgo=") center center no-repeat;
+  right: 6px;
+  top: 8px;
+  margin-top: 0;
+  transform: none;
 }
 
 .choices[data-type*=select-one].is-open::after {
-  border-color: transparent transparent #b3b3b3;
+  margin-top: -0.5px;
+  transform: rotate(180deg);
 }
 
 /* Filer placeholder label that is shown in the dropdown */
@@ -460,7 +468,7 @@ html[data-color-scheme=dark] {
 
 /* Group headlines */
 .choices__heading {
-  color: var(--text);
+  color: var(--text, #222);
   cursor: default;
   border: 0 none;
   padding: 3px 0 3px 7px;
@@ -492,15 +500,15 @@ html[data-color-scheme=dark] {
 }
 
 .choices__list--multiple .choices__item {
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: var(--choices-bg);
-  color: var(--text);
+  color: var(--text, #222);
   border: 1px solid var(--choices-border);
   line-height: 16px;
-  padding: 2px 19px 3px 6px;
-  margin: 2px 0 5px 5px;
+  padding: 2px 19px 2px 6px;
+  margin: 3px 0 3px 3px;
   position: relative;
-  top: 1px;
+  top: 0;
   word-break: revert;
   vertical-align: baseline;
   font-size: inherit;
