@@ -526,6 +526,7 @@ html:not([data-color-scheme=dark]) .choices[data-type*=text] .choices__button {
 
 .choices[data-type*=select-one] .choices__input {
   padding: 5px;
+  font-size: 13px;
 }
 
 /* Never show the remove button on single selects */
