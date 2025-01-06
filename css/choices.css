@@ -420,8 +420,6 @@ html[data-color-scheme=dark] {
 
 .choices__list--dropdown, .choices__list[aria-expanded] {
   left: -1px;
-  width: calc(100% - 8px);
-  padding: 4px;
 }
 
 /* Arrow icon */
@@ -453,15 +451,11 @@ html[data-color-scheme=dark] {
   padding: 7px 0;
 }
 
-.choices__list {
-  font-size: 13px;
-}
-
 .choices__list--dropdown .choices__item,
 .choices__list[aria-expanded] .choices__item,
 .choices__list--dropdown .choices__list:before {
   padding: 3px 7px;
-  font-size: inherit;
+  font-size: 13px;
 }
 
 /* Group headlines */
@@ -531,10 +525,8 @@ html:not([data-color-scheme=dark]) .choices[data-type*=text] .choices__button {
 }
 
 .choices[data-type*=select-one] .choices__input {
-  background: var(--form-bg);
-  border-radius: 2px;
-  border: 1px solid var(--form-border);
-  margin-bottom: 3px;
+  padding: 5px;
+  font-size: 13px;
 }
 
 /* Never show the remove button on single selects */
