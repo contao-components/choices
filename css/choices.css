@@ -397,7 +397,8 @@ html[data-color-scheme=dark] {
 .choices__inner,
 .choices.is-disabled .choices__inner,
 .choices.is-disabled .choices__input,
-.choices .choices__input {
+.choices .choices__input,
+.choices[data-type*=select-one] .choices__input {
   background: transparent;
 }
 
@@ -549,6 +550,7 @@ html:not([data-color-scheme=dark]) .choices[data-type*=text] .choices__button {
   height: auto;
   padding: 3px 6px;
   font-size: 13px;
+  border-bottom: 1px solid var(--form-border, #aaa);
 }
 
 /* Never show the remove button on single selects */
