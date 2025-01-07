@@ -357,7 +357,7 @@ html[data-color-scheme=dark] {
 
 .choices.is-focused {
   z-index: 4; /* Higher z-index than tinymce and sticky-footer */
-  outline: -webkit-focus-ring-color auto 5px;
+  outline: -webkit-focus-ring-color auto 3px;
 }
 
 .choices {
