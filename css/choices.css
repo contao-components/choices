@@ -424,19 +424,29 @@ html[data-color-scheme=dark] {
 
 /* Arrow icon */
 .choices[data-type*=select-one]::after {
-  border: 0;
+  display: none;
+}
+
+.choices[data-type*=select-one] .choices__inner::after {
+  content: "";
   height: 12px;
   width: 12px;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmE2YTZjIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIvPjwvc3ZnPgo=") center center no-repeat;
+  position: absolute;
   right: 6px;
   top: 8px;
-  margin-top: 0;
   transform: none;
+  pointer-events: none;
 }
 
-.choices[data-type*=select-one].is-open::after {
+.choices[data-type*=select-one].is-open .choices__inner::after {
   margin-top: -0.5px;
   transform: rotate(180deg);
+}
+
+.choices[data-type*=select-one][dir=rtl] .choices__inner::after {
+  left: 6px;
+  right: auto;
 }
 
 /* Filer placeholder label that is shown in the dropdown */
@@ -483,9 +493,11 @@ html[data-color-scheme=dark] {
   .choices__list--dropdown .choices__item--selectable[data-select-text], .choices__list[aria-expanded] .choices__item--selectable[data-select-text] {
     padding-right: inherit;
   }
+
   .choices__list--dropdown .choices__item--selectable[data-select-text]::after, .choices__list[aria-expanded] .choices__item--selectable[data-select-text]::after {
     content: none;
   }
+
   [dir=rtl] .choices__list--dropdown .choices__item--selectable[data-select-text],
   [dir=rtl] .choices__list[aria-expanded] .choices__item--selectable[data-select-text] {
     padding-left: inherit;
