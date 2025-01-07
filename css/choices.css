@@ -462,7 +462,7 @@ html[data-color-scheme=dark] {
 .choices__list--dropdown .choices__item,
 .choices__list[aria-expanded] .choices__item,
 .choices__list--dropdown .choices__list:before {
-  padding: 3px 7px;
+  padding: 3px 6px;
   font-size: 13px;
 }
 
@@ -471,7 +471,7 @@ html[data-color-scheme=dark] {
   color: var(--text, #222);
   cursor: default;
   border: 0 none;
-  padding: 3px 0 3px 7px;
+  padding: 3px 0 3px 6px;
 }
 
 .choices__list:has(> .choices__group) > .choices__item {
@@ -517,6 +517,7 @@ html[data-color-scheme=dark] {
 
 .choices[data-type*=select-multiple] .choices__button,
 .choices[data-type*=text] .choices__button {
+  padding-bottom: 2px;
   border-left-color: var(--choices-border);
 }
 
@@ -527,13 +528,14 @@ html:not([data-color-scheme=dark]) .choices[data-type*=text] .choices__button {
 }
 
 .choices:not([data-type*=select-one]) .choices__input {
-  padding: 5px;
+  padding: 3px 6px;
   margin: 0;
   width: auto !important;
 }
 
 .choices[data-type*=select-one] .choices__input {
-  padding: 5px;
+  height: auto;
+  padding: 3px 6px;
   font-size: 13px;
 }
 
