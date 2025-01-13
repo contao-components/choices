@@ -368,10 +368,6 @@ html[data-color-scheme=dark] {
   background-image: none !important;
 }
 
-.choices:last-child {
-  margin-bottom: 3px;
-}
-
 .choices__placeholder {
   opacity: 1;
 }
