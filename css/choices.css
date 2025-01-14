@@ -408,6 +408,7 @@ html[data-color-scheme=dark] {
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
   border: 1px solid var(--form-border, #aaa);
+  z-index: 3;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
