@@ -342,6 +342,7 @@
   --choices-highlighted: #3997fe;
   --choices-bg: #eee;
   --choices-border: #bbb;
+  --border-radius: .375rem;
 }
 
 html[data-color-scheme=dark] {
@@ -411,8 +412,12 @@ html[data-color-scheme=dark] {
 
 /* Dropdown styles */
 .choices__list--dropdown, .choices__list[aria-expanded] {
+  margin-top: 0;
+  left: -1px;
   background: var(--form-bg, #fff);
   border: 1px solid var(--form-border, #aaa);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
   word-break: break-word;
 }
 
@@ -425,10 +430,6 @@ html[data-color-scheme=dark] {
 .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
   background: var(--choices-highlighted);
   color: #fff;
-}
-
-.choices__list--dropdown, .choices__list[aria-expanded] {
-  left: -1px;
 }
 
 /* Arrow icon */
@@ -446,6 +447,11 @@ html[data-color-scheme=dark] {
   top: 8px;
   transform: none;
   pointer-events: none;
+}
+
+.choices[data-type*=select-one].is-open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .choices[data-type*=select-one].is-open .choices__inner::after {
