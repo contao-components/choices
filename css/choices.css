@@ -20,7 +20,7 @@
   background-color: var(--choices-bg-color-disabled, #eaeaea);
   cursor: not-allowed !important;
   -webkit-user-select: none;
-  user-select: none;
+          user-select: none;
 }
 .choices.is-disabled .choices__item {
   cursor: not-allowed;
@@ -277,7 +277,7 @@
 .choices__item--disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
-  user-select: none;
+          user-select: none;
   opacity: 0.5;
 }
 
