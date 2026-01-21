@@ -338,7 +338,6 @@
 /* =====  Contao specific  ====== */
 :root {
   --choices-highlighted: #3997fe;
-  --choices-highlighted-color: #3997fe;
   --choices-bg: #eee;
   --choices-border: #bbb;
   --border-radius: .375rem;
