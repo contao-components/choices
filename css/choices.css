@@ -20,7 +20,7 @@
   background-color: var(--choices-bg-color-disabled, #eaeaea);
   cursor: not-allowed !important;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .choices.is-disabled .choices__item {
   cursor: not-allowed;
@@ -277,7 +277,7 @@
 .choices__item--disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   opacity: 0.5;
 }
 
@@ -341,10 +341,15 @@
   --choices-bg: #eee;
   --choices-border: #bbb;
   --border-radius: .375rem;
+  --choices-keyline-color: var(--form-border);
+  --choices-bg-color-dropdown: var(--form-bg);
+  --choices-border-radius: var(--border-radius);
+  --choices-item-color: var(--text);
 }
 
 html[data-color-scheme=dark] {
   --choices-highlighted: #1b325f;
+  --choices-highlighted-color: #1b325f;
   --choices-bg: #27292f;
   --choices-border: #464853;
 }
@@ -392,28 +397,15 @@ html[data-color-scheme=dark] {
   min-height: unset;
 }
 
-.choices__inner,
-.choices.is-disabled .choices__inner,
-.choices.is-disabled .choices__input,
-.choices .choices__input,
-.choices[data-type*=select-one] .choices__input {
-  background: transparent;
-}
-
 /* Dropdown styles */
 .choices__list--dropdown, .choices__list[aria-expanded] {
   margin-top: 0;
   left: -1px;
-  background: var(--form-bg, #fff);
-  border: 1px solid var(--form-border, #aaa);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
   word-break: break-word;
 }
 
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
-  border: 1px solid var(--form-border, #aaa);
   z-index: 3;
 }
 
@@ -519,7 +511,6 @@ html[data-color-scheme=dark] {
 .choices__list--multiple .choices__item {
   border-radius: 2px;
   background-color: var(--choices-bg);
-  color: var(--text, #222);
   border: 1px solid var(--choices-border);
   line-height: 16px;
   padding: 2px 19px 2px 6px;
@@ -554,7 +545,6 @@ html:not([data-color-scheme=dark]) .choices[data-type*=text] .choices__button {
   height: auto;
   padding: 3px 6px;
   font-size: 13px;
-  border-bottom: 1px solid var(--form-border, #aaa);
 }
 
 /* Never show the remove button on single selects */
