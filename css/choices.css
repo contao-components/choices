@@ -338,6 +338,7 @@
 /* =====  Contao specific  ====== */
 :root {
   --choices-highlighted: #3997fe;
+  --choices-highlighted-color: #eee;
   --choices-bg: #eee;
   --choices-border: #bbb;
   --border-radius: .375rem;
@@ -349,7 +350,7 @@
 
 html[data-color-scheme=dark] {
   --choices-highlighted: #1b325f;
-  --choices-highlighted-color: #1b325f;
+  --choices-highlighted-color: #27292f;
   --choices-bg: #27292f;
   --choices-border: #464853;
 }
