@@ -341,10 +341,9 @@
   --choices-highlighted-color: #eee;
   --choices-bg: #eee;
   --choices-border: #bbb;
-  --border-radius: .375rem;
   --choices-keyline-color: var(--form-border);
   --choices-bg-color-dropdown: var(--form-bg);
-  --choices-border-radius: var(--border-radius);
+  --choices-border-radius: var(--border-radius, .375rem);
   --choices-item-color: var(--text);
 }
 
