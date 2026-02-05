@@ -340,6 +340,8 @@
   --choices-highlighted: #3997fe;
   --choices-highlighted-color: #eee;
   --choices-bg: #eee;
+  --choices-bg-color: transparent;
+  --choices-bg-color-disabled: transparent;
   --choices-border: #bbb;
   --choices-keyline-color: var(--form-border);
   --choices-bg-color-dropdown: var(--form-bg);
