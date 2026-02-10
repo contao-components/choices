@@ -340,6 +340,8 @@
   --choices-highlighted: #3997fe;
   --choices-highlighted-color: #eee;
   --choices-bg: #eee;
+  --choices-bg-color: transparent;
+  --choices-bg-color-disabled: transparent;
   --choices-border: #bbb;
   --choices-keyline-color: var(--form-border);
   --choices-bg-color-dropdown: var(--form-bg);
@@ -432,11 +434,6 @@ html[data-color-scheme=dark] {
   pointer-events: none;
 }
 
-.choices[data-type*=select-one].is-open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
 .choices[data-type*=select-one].is-open .choices__inner::after {
   margin-top: -0.5px;
   transform: rotate(180deg);
@@ -445,6 +442,16 @@ html[data-color-scheme=dark] {
 .choices[data-type*=select-one][dir=rtl] .choices__inner::after {
   left: 6px;
   right: auto;
+}
+
+.choices.is-open:not(.is-flipped) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.choices.is-open.is-flipped {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* Filer placeholder label that is shown in the dropdown */
