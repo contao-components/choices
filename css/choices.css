@@ -347,6 +347,7 @@
   --choices-bg-color-dropdown: var(--form-bg, #fff);
   --choices-border-radius: var(--border-radius, .375rem);
   --choices-item-color: var(--text, #222);
+  --choices-z-index: 4;
 }
 
 html[data-color-scheme=dark] {
@@ -362,7 +363,7 @@ html[data-color-scheme=dark] {
 }
 
 .choices.is-focused {
-  z-index: 4; /* Higher z-index than tinymce and sticky-footer */
+  z-index: auto; /* Revert the z-index - see #9291 */
 }
 
 .choices {
