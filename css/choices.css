@@ -410,7 +410,6 @@ html[data-color-scheme=dark] {
 .is-open .choices__list--dropdown,
 .is-open .choices__list[aria-expanded] {
   border-color: var(--choices-keyline-color);
-  z-index: 3;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
